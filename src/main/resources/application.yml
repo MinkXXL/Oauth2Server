@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: api-oauth2-server
+  mvc:
+    favicon:
+      enabled: false
+    throw-exception-if-no-handler-found: true
+  main:
+    banner-mode: 'off'
+security:
+  oauth2:
+    resource:
+      filter-order: 3
+    client:
+      authenticationScheme: header
+
+oauth2Server:
+  clientId: "test"
+  clientSecret: "test"
+  minuteTokenExpire: 240
+  resourceId: "oauth2-server"
+
+server:
+  port: 8888
+  error:
+    whitelabel:
+      enabled: false
